@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">RoomDatabase</string>
+
+    <!--Login strings-->
+    <string name="login">Login</string>
+    <string name="email">Email&#8230;</string>
+    <string name="password">Password&#8230;</string>
+    <string name="forgot_password">Forgot Password ?</string>
+    <string name="dont_have_account">Don\'t have an account ?</string>
+    <string name="register">Register</string>
+
+    <!--Register strings-->
+    <string name="already_have_account">Already have account ?</string>
+</resources>
