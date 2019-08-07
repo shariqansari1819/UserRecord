@@ -13,7 +13,9 @@ import android.widget.Toast;
 
 import com.codebosses.roomdatabase.R;
 import com.codebosses.roomdatabase.databinding.ActivityLoginBinding;
+import com.codebosses.roomdatabase.endpoints.EndpointKey;
 import com.codebosses.roomdatabase.pojo.User;
+import com.codebosses.roomdatabase.utils.PrefUtils;
 import com.codebosses.roomdatabase.viewmodel.LoginViewModel;
 
 public class LoginActivity extends AppCompatActivity {
@@ -50,7 +52,10 @@ public class LoginActivity extends AppCompatActivity {
                         if (user == null) {
                             Toast.makeText(LoginActivity.this, "Invalid user", Toast.LENGTH_SHORT).show();
                         } else {
-                            Toast.makeText(LoginActivity.this, "User exist.", Toast.LENGTH_SHORT).show();
+                            PrefUtils.saveToPrefs(LoginActivity.this, EndpointKey.USER_LOGGED_IN, true);
+                            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                            startActivity(intent);
                         }
                     }
                 });

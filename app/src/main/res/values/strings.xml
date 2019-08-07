@@ -10,5 +10,7 @@
     <string name="register">Register</string>
 
     <!--Register strings-->
+    <string name="full_name">Full name&#8230;</string>
+    <string name="phone_number">Phone number&#8230;</string>
     <string name="already_have_account">Already have account ?</string>
 </resources>
